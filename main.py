@@ -23,7 +23,6 @@ class Browser:
     def open_page(self, url:str):
         self.browser.get(url)
 
-
     def add_input(self, by:By, id:str, value:str):
         field = self.browser.find_element(by = by, value = id)
         field.send_keys(value)
@@ -42,6 +41,11 @@ class Browser:
     def get_header(self):
         header = self.browser.find_element(by=By.TAG_NAME, value='h1')
         header = header.text.replace(' ' ,'_')
+        # normalise header so that it can be used as a file name
+        replaced_chars = [replacements.get(char, char) for char in header]
+        header = ''.join(replaced_chars)
+        # truncate long ad names to max file name length
+        header = header[:135] if len(header) > 135 else header
         return header
 
     def make_folder(self):
