@@ -107,10 +107,11 @@ class Browser:
     def save_chapter(self, first_page:str):
         self.open_page(first_page)
         time.sleep(timers['pageload'])
+        time.sleep(timers['hotkey'])
         self.make_folder()
         folder = self.get_header()
         counter = 0
-        self.save_and_unlock(folder = folder, filename = folder, counter = counter)
+        counter = self.save_and_unlock(folder = folder, filename = folder, counter = counter)
         counter = self.save_ticked(folder = folder, counter = counter)
         self.save_unticked(folder=folder, counter=counter)
 
