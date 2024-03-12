@@ -9,6 +9,8 @@ The following assumptions are made about the user of this script:
 * You are running this script on a Windows machine. 
 * You have Chrome web browser installed on your machine.
 * You have Python, pip and git installed on your machine.
+* You have ticked off at least one task in each chapter as complete (if you have not, tick off the first task before running this script).
+* You have ticked off consecutive tasks (if you have ticked off more advanced tasks in a chapter before ticking off less advanced ones, tick them all off before running this script).
 
 ## Setup and installation
 
@@ -47,7 +49,8 @@ To start the script run the following command :
 This will cause a Chrome web browser to pop up and from there all webpages will be accessed and saved automatically.
 
 🔴❗ DO NOT INTERACT WITH THE COMPUTER WHILE THE SCRIPT IS RUNNING❗🔴
-The script is designed to always have focus on the browser window. If you click away from the browser, the script will not be able to save webpages and will exit with an error.
+
+The script is designed to always have focus on the browser window. If you click away from the browser, the script will not be able to save webpages and will exit with an error. You will be able to follow the progress by reading the messages that will be output to the console. 
 
 # Disclaimer
 
